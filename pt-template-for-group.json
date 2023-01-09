@@ -1,0 +1,14 @@
+{
+    "name": "${pt-name}",
+    "repo": {
+      "repositories": "${repos}",
+      "actions-groups": {
+        "${group}": "read,write,annotate,delete,managedXrayMeta"
+      }
+    },
+    "build": {
+      "actions-groups": {
+        "${group}": "read,write,annotate,delete,managedXrayMeta"
+      }
+    }
+  }
