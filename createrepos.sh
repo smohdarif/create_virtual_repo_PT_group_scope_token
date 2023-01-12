@@ -25,7 +25,7 @@ helpFunction()
    echo -e "\t-l  Create policy - true/false"
    echo -e "\t-b  Build name - anypoint-sapi-build-release"
    echo "For example:"
-   echo "bash createrepos.sh -a anypoint-sapi -s psuseast1 -p https://repository.mulesoft.org/nexus/content/repositories/public -v https://repo.maven.apache.org/maven2 -n https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/ -r https://repository.mulesoft.org/releases -l false -b mvn-sample-build"
+   echo "bash createrepos.sh -a anypoint-sapi -s psuseast1 -p https://repository.mulesoft.org/nexus/content/repositories/public -v https://repo.maven.apache.org/maven2 -n https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/ -r https://repository.mulesoft.org/releases -l false -b anypoint-sapi-build-release"
    exit 1 # Exit script after printing help
 }
 
