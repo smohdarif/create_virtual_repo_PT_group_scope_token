@@ -1,2 +1,4 @@
 .env
 froggy.tgz
+watch_for_api.json
+current_build_index.json

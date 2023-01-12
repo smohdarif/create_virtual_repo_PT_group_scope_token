@@ -19,24 +19,25 @@ export mulesoft_public_url=
 
 **Use-case:**
 
-How to create local , remote repos and wrap it with a virtual repo using Jfrog CLI templates ?
-Then create a group that has write/deploy permissions to the local repos and cache permissions to the remote repos.
-Use permission tempolates and create it using jfrog cli.
-
-Create an Access token that has the group scope  and non-expirable ( using the new Jfrog Access API and not the old 
+1. Create local , remote repos and wrap it with a virtual repo using Jfrog CLI templates .
+2. Next  create a group that has write/deploy permissions to the local repos and cache permissions to the remote repos.
+using  permission templates 
+3. Create an Access token that has the group scope  and non-expirable ( using the new Jfrog Access API and not the old 
 security API) .
-
-Also what does refreshable access token mean and how to refresh it when it expires. 
+4. Create a refreshable access token  and  refresh it when it expires. 
 Verify that this token can upload artifacts to local and virtual repo and download artifacts from the remote repo 
 before using this token in the Github actions workflow.
 
-FYI the json  as documented in  [application/vnd.org.jfrog.artifactory.security.PermissionTargetV2+json](https://www.jfrog.com/confluence/display/JFROG/Security+Configuration+JSON#SecurityConfigurationJSON-application/vnd.org.jfrog.artifactory.security.PermissionTargetV2+json) is incorrect.
+Note: The json  as documented in  [application/vnd.org.jfrog.artifactory.security.PermissionTargetV2+json]
+(https://www.jfrog.com/confluence/display/JFROG/Security+Configuration+JSON#SecurityConfigurationJSON-application/vnd.org.jfrog.artifactory.security.PermissionTargetV2+json) is incorrect.
 It should be be "actions_users"  instead of "actions.users"  and  "actions_groups"  instead of "actions.groups". Will log Doc JIRA later.
 
 References:
 https://www.jfrog.com/confluence/display/JFROG/Repository+Configuration+JSON
 
 https://github.com/sureshvenkatesan/swampup2021-1/blob/su115-functional-test-gradle7/solution.sh
+
+Steps to implement the use-case:
 
 1. Create a local maven repository
 

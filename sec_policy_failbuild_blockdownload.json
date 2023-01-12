@@ -1,0 +1,23 @@
+{
+  "name":  "werner-api-policy",
+  "type": "security",
+  "description": "Policy to generate violation, failbuild and blockdownload ",
+  "rules": [
+    {
+      "name": "werner-api-policy-allSeverities",
+      "priority": 1,
+      "actions": {
+        "fail_build": true,
+        "block_download": {
+          "unscanned": false,
+          "active": true
+        }
+      },
+      "criteria": {
+        "fix_version_dependant": false,
+        "min_severity": "Unknown"
+      }
+    }
+  ]
+
+}

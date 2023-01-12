@@ -4,5 +4,6 @@
     "rclass": "remote",
     "url": "${url}",
     "username": "${username}",
-    "password": "${password}"
+    "password": "${password}",
+    "xrayIndex": "true"
   }

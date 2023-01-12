@@ -1,0 +1,54 @@
+{
+  "general_data": {
+    "name": "$APINAME-watch",
+    "description": "watch for api $APINAME",
+    "active": true
+  },
+  "project_resources": {
+    "resources": [
+      {
+        "type": "build",
+        "name": "$BUILD-FOR-API",
+        "bin_mgr_id": "default",
+        "build_repo": "builds"
+      },
+      {
+        "type": "repository",
+        "name": "$APINAME-mvn-local",
+        "bin_mgr_id": "default",
+        "repo_type": "local"
+      },
+      {
+        "type": "repository",
+        "name": "$APINAME-mulesoft-public-remote",
+        "bin_mgr_id": "default",
+        "repo_type": "remote"
+      },
+      {
+        "type": "repository",
+        "name": "$APINAME-maven-public-remote",
+        "bin_mgr_id": "default",
+        "repo_type": "remote"
+      },
+      {
+        "type": "repository",
+        "name": "$APINAME-mulesoft-nexus-remote",
+        "bin_mgr_id": "default",
+        "repo_type": "remote"
+      },
+      {
+        "type": "repository",
+        "name": "$APINAME-mulesoft-release-remote",
+        "bin_mgr_id": "default",
+        "repo_type": "remote"
+      }
+
+    ]
+  },
+  "assigned_policies": [
+    {
+      "name": "werner-api-policy",
+      "type": "security"
+    }
+  ]
+}
