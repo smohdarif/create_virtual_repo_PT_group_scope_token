@@ -11,8 +11,8 @@ export mulesoft_organization_user=
 export mulesoft_organization_password=
 
 export mulesoft_nexus_ee_url=
-export mulesoft_nexus_ee_user=
-export mulesoft_nexus_ee_password=
+export MULESOFT_NEXUS_EE_USER=
+export MULESOFT_NEXUS_EE_PASSWORD=
 
 export mulesoft_public_url=
 ```
@@ -53,7 +53,7 @@ https://github.com/jfrog/SwampUp2022/blob/main/SUP016-Automate_everything_with_t
 ```text
 jf rt rc remote_repo_template.json --vars "repo-name=${apiname}-sapi-werner-mulesoft-dev-remote;package-type=maven;url=${mulesoft_organization_url};username=${mulesoft_organization_user};password=${mulesoft_organization_password}" --server-id ${SERVER_ID}
 
-jf rt rc remote_repo_template.json --vars "repo-name=${apiname}-sapi-mulesoft-nexus-dev-remote;package-type=maven;url=${mulesoft_nexus_ee_url};username=${mulesoft_nexus_ee_user};password=${mulesoft_nexus_ee_password}" --server-id ${SERVER_ID}
+jf rt rc remote_repo_template.json --vars "repo-name=${apiname}-sapi-mulesoft-nexus-dev-remote;package-type=maven;url=${mulesoft_nexus_ee_url};username=${MULESOFT_NEXUS_EE_USER};password=${MULESOFT_NEXUS_EE_PASSWORD}" --server-id ${SERVER_ID}
 
 jf rt rc remote_repo_template.json --vars "repo-name=${apiname}-sapi-mulesoft-public-dev-remote;package-type=maven;url=${mulesoft_public_url};username=;password=" --server-id ${SERVER_ID}
 ```
